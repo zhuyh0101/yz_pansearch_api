@@ -8,6 +8,8 @@
 
 如果你感兴趣，可以通过我的[邀请码](https://www.moneysou.com/login?ref=moneysou)注册购买。
 
+![元站](./docs/images/yz.png)
+
 ## 使用
 
 直接基于 Docker 部署：
@@ -50,14 +52,14 @@ curl --request POST \
     "total": 1,
     "data": [
       {
-        "title": "[边水往事][2024][全21集][国产剧]",
+        "title": "七龙珠",
         "description": "",
         "res_dict": {
           "quark": [
-            "https://pan.quark.cn/s/0b60b7f36e78"
+            "https://pan.quark.cn/s/xxx"
           ],
           "baidu": [
-            "https://pan.baidu.com/s/181yhj3D3e8q5TnPbCtD4UA?pwd=8888"
+            "https://pan.baidu.com/s/xxx"
           ]
         }
       }
