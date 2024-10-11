@@ -78,6 +78,7 @@ def get_kk():
                             target_data.append(
                                 {
                                     "title": res.get("question", ""),
+                                    "description": "",
                                     "res_dict": res_dict,
                                 }
                             )

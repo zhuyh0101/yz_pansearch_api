@@ -10,7 +10,63 @@
 
 ## 使用
 
+直接基于 Docker 部署：
 
+```shell
+docker run -d -p 8067:8067 --name yz_pansearch_api --restart unless-stopped \
+-e APP_TOKEN=设置 token \
+-e REDIS_HOST=Redis 用户名 \
+-e REDIS_PORT=Redis 端口 \
+-e REDIS_PASSWORD=Redis 密码 \
+-e REDIS_DB=11 \
+-e REDIS_CACHE_TTL=600 \
+howie6879/yz_pansearch_api:http-v0.1.0
+```
+
+目前支持的源有：
+
+- kk: http://z.kkkob.com/
+- 更多支持中
+
+启动成功后，通过 `http://ip:8067`，curl 的请求示例如下：
+
+```shell
+curl --request POST \
+  --url http://127.0.0.1:8067/v1/search/get_kk \
+  --header 'APP-ID: yz_pansearch_api' \
+  --header 'APP-TOKEN: 你启动服务自己设置的 Token' \
+  --header 'PAN-TYPE: quark' \
+  --header 'content-type: application/json' \
+  --data '{
+  "kw": "xx"
+}'
+```
+
+返回格式（符合元站官方标准即可）：
+
+```json
+{
+  "data": {
+    "total": 1,
+    "data": [
+      {
+        "title": "[边水往事][2024][全21集][国产剧]",
+        "description": "",
+        "res_dict": {
+          "quark": [
+            "https://pan.quark.cn/s/0b60b7f36e78"
+          ],
+          "baidu": [
+            "https://pan.baidu.com/s/181yhj3D3e8q5TnPbCtD4UA?pwd=8888"
+          ]
+        }
+      }
+    ]
+  },
+  "info": "ok",
+  "status": 0
+}
+```
 
 ## 开发
 
