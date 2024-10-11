@@ -8,7 +8,7 @@
 
 如果你感兴趣，可以通过我的[邀请码](https://www.moneysou.com/login?ref=moneysou)注册购买。
 
-![元站](./docs/images/yz.png)
+![元站](https://img.fre123.com/i/2024/10/11/6708f20fbc21d.jpg)
 
 ## 使用
 
